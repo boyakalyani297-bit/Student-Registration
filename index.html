@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Registration</h1>
+
+    <form id="registrationForm">
+
+        <!-- Student Name -->
+        <label for="studentName">Student Name</label>
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Enter student name"
+            required
+        >
+
+        <!-- Student Mobile -->
+        <label for="studentMobile">Student Mobile Number</label>
+        <input
+            type="tel"
+            id="studentMobile"
+            placeholder="Enter 10-digit mobile number"
+            maxlength="10"
+            inputmode="numeric"
+            required
+        >
+
+        <!-- Qualification -->
+        <label for="qualification">Qualification</label>
+        <input
+            type="text"
+            id="qualification"
+            placeholder="Enter qualification"
+            required
+        >
+
+        <!-- Father Name -->
+        <label for="fatherName">Father Name</label>
+        <input
+            type="text"
+            id="fatherName"
+            placeholder="Enter father name"
+            required
+        >
+
+        <!-- Father Mobile -->
+        <label for="fatherMobile">Father Mobile Number</label>
+        <input
+            type="tel"
+            id="fatherMobile"
+            placeholder="Enter 10-digit mobile number"
+            maxlength="10"
+            inputmode="numeric"
+            required
+        >
+
+        <!-- ADDRESS -->
+        <div class="section-heading">ADDRESS</div>
+
+        <!-- Village -->
+        <label for="village">Village</label>
+        <input
+            type="text"
+            id="village"
+            placeholder="Enter village"
+            required
+        >
+
+        <!-- Mandal -->
+        <label for="mandal">Mandal</label>
+
+        <select id="mandal" required>
+            <option value="">Select Mandal</option>
+            <option value="Kodad">Kodad</option>
+            <option value="Huzurnagar">Huzurnagar</option>
+            <option value="Jaggayyapeta">Jaggayyapeta</option>
+        </select>
+
+        <!-- Submit -->
+        <button type="submit" id="submitBtn">
+            Submit
+        </button>
+
+    </form>
+
+</div>
+
+
+<!-- SUCCESS POPUP -->
+
+<div id="successPopup" class="popup">
+
+    <div class="popup-content">
+
+        <h2>Registration Successful</h2>
+
+        <p id="successMessage"></p>
+
+        <button type="button" onclick="closePopup()">
+            OK
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
