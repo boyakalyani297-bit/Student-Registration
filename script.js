@@ -3,9 +3,33 @@ const submitBtn = document.getElementById("submitBtn");
 
 const studentNameInput = document.getElementById("studentName");
 const studentMobileInput = document.getElementById("studentMobile");
-
+const motherNameInput = document.getElementById("motherName");
 const fatherNameInput = document.getElementById("fatherName");
-const fatherMobileInput = document.getElementById("fatherMobile");
+const parentMobileInput = document.getElementById("parentMobile");
+const qualificationInput =
+    document.getElementById("qualification");
+
+const collegeSection =
+    document.getElementById("collegeSection");
+
+const collegeInput =
+    document.getElementById("college");
+    qualificationInput.addEventListener("change", function () {
+
+    if (this.value === "College") {
+
+        collegeSection.style.display = "block";
+        collegeInput.required = true;
+
+    } else {
+
+        collegeSection.style.display = "none";
+        collegeInput.required = false;
+        collegeInput.value = "";
+
+    }
+
+});
 
 
 // ===============================
@@ -15,7 +39,9 @@ const fatherMobileInput = document.getElementById("fatherMobile");
 studentNameInput.addEventListener("input", function () {
     this.value = this.value.toUpperCase();
 });
-
+motherNameInput.addEventListener("input", function () {
+    this.value = this.value.toUpperCase();
+});
 fatherNameInput.addEventListener("input", function () {
     this.value = this.value.toUpperCase();
 });
@@ -38,7 +64,7 @@ function allowOnlyNumbers(input) {
 }
 
 allowOnlyNumbers(studentMobileInput);
-allowOnlyNumbers(fatherMobileInput);
+allowOnlyNumbers(parentMobileInput);
 
 
 // ===============================
@@ -61,19 +87,27 @@ form.addEventListener("submit", function (event) {
     const qualification =
         document.getElementById("qualification")
         .value.trim();
+        let college = "-";
+
+if (qualification === "College") {
+    college = collegeInput.value;
+}
+    
+    const motherName =
+        motherNameInput.value.trim();
 
     const fatherName =
         fatherNameInput.value.trim();
 
-    const fatherMobile =
-        fatherMobileInput.value.trim();
+    const parentMobile =
+        parentMobileInput.value.trim();
 
     const village =
         document.getElementById("village")
         .value.trim();
 
-    const mandal =
-        document.getElementById("mandal").value;
+    const constituency =
+        document.getElementById("constituency").value;
 
 
     // ===============================
@@ -96,13 +130,13 @@ form.addEventListener("submit", function (event) {
     }
 
 
-    if (!mobilePattern.test(fatherMobile)) {
+    if (!mobilePattern.test(parentMobile)) {
 
         alert(
-            "Please enter a valid 10-digit Father Mobile Number starting with 6, 7, 8 or 9."
+            "Please enter a valid 10-digit Parent Mobile Number starting with 6, 7, 8 or 9."
         );
 
-        fatherMobileInput.focus();
+        parentMobileInput.focus();
 
         return;
     }
@@ -165,7 +199,7 @@ form.addEventListener("submit", function (event) {
         ) {
 
             alert(
-                "This student is already registered.\n\n" +
+                "You are already registered.\n\n" +
                 "Your Registration ID: " +
                 response.registrationId
             );
@@ -209,17 +243,23 @@ form.addEventListener("submit", function (event) {
         "&qualification=" +
         encodeURIComponent(qualification) +
 
+        "&college=" +
+        encodeURIComponent(college) +
+
+           "&motherName=" +
+        encodeURIComponent(motherName) +
+
         "&fatherName=" +
         encodeURIComponent(fatherName) +
 
-        "&fatherMobile=" +
-        encodeURIComponent(fatherMobile) +
+        "&parentMobile=" +
+        encodeURIComponent(parentMobile) +
 
         "&village=" +
         encodeURIComponent(village) +
 
-        "&mandal=" +
-        encodeURIComponent(mandal) +
+        "&constituency=" +
+        encodeURIComponent(constituency) +
 
         "&callback=" +
         encodeURIComponent(callbackName);
