@@ -13,7 +13,7 @@
 
 <div class="container">
 
-    <h1>One-Day Islamic Workshop
+    <h1>One-Day Islamic Training Workshop
          Registration Form</h2>
 
     <form id="registrationForm">
@@ -51,8 +51,10 @@
     <select id="college">
         <option value="">Select College Qualification</option>
         <option value="Inter">Inter</option>
+          <option value="Diploma">Diploma</option>
         <option value="Degree">Degree</option>
-        <option value="B.Tech">B.Tech</option>
+        <option value="Engineering">Engineering</option>
+          <option value="Pharmacy">Pharmacy</option>
         <option value="PG/Above">PG/Above</option>
     </select>
 </div>
@@ -107,6 +109,33 @@
             <option value="Jaggayyapeta">Jaggayyapeta</option>
         </select>
 
+       <div class="form-group">
+    <label>Can you read the Qur'an in Arabic?</label>
+
+    <div class="radio-group">
+        <label>
+            <input type="radio" name="quranArabic" value="Yes" required>
+            Yes
+        </label>
+
+        <label>
+            <input type="radio" name="quranArabic" value="No">
+            No
+        </label>
+    </div>
+</div>
+<div class="form-group">
+    <label for="surahCount">
+        How many Qur'an Surahs can you remember by heart?
+    </label>
+
+    <select id="surahCount" name="surahCount" required>
+        <option value="">Select an option</option>
+        <option value="Up to 10">Up to 10</option>
+        <option value="Between 11 and 30">Between 11 and 30</option>
+        <option value="Between 31 and 114">Between 31 and 114</option>
+    </select>
+</div>
         <!-- Submit -->
         <button type="submit" id="submitBtn">
             Submit
