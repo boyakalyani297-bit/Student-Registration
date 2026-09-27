@@ -193,3 +193,31 @@ button:disabled {
     width: auto;
     margin: 0;
 }
+
+/* Qur'an question radio buttons */
+
+.radio-group {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 25px !important;
+    margin-top: 8px !important;
+    width: 100% !important;
+}
+
+.radio-group label {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 5px !important;
+}
+
+.radio-group input[type="radio"] {
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
