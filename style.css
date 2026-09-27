@@ -175,25 +175,6 @@ button:disabled {
     width: 100%;
 }
 
-.radio-group {
-    display: flex;
-    gap: 25px;
-    margin-top: 8px;
-    align-items: center;
-}
-
-.radio-group label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    width: auto;
-}
-
-.radio-group input[type="radio"] {
-    width: auto;
-    margin: 0;
-}
-
 /* Qur'an question radio buttons */
 
 .radio-group {
