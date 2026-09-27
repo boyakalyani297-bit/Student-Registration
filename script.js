@@ -160,7 +160,7 @@ if (qualification === "College") {
     // ===============================
 
     const scriptURL =
-        "https://script.google.com/macros/s/AKfycbybz0qQdUFHW30quwyGJB-wd0zjN9T0eTqLGSOrNShVghtfmvLsoTQEpdzjsYBD3Hkv/exec";
+        "https://script.google.com/macros/s/AKfycby5AJHfalTgd63JUazq-Qx4HHjL-7VpET6KXABFRiTNUn06puPNQHQJz_JZegDb1uqN/exec";
 
 
     // ===============================
