@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Registration Form</title>
+    <title>One-Day Islamic Workshop</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,7 +13,8 @@
 
 <div class="container">
 
-    <h1>Registration Form</h1>
+    <h1>One-Day Islamic Workshop
+         Registration Form</h2>
 
     <form id="registrationForm">
 
@@ -39,14 +40,32 @@
 
         <!-- Qualification -->
         <label for="qualification">Qualification</label>
+<select id="qualification" required>
+    <option value="">Select Qualification</option>
+    <option value="School">School</option>
+    <option value="College">College</option>
+</select>
+
+<div id="collegeSection" style="display: none;">
+    <label for="college">College</label>
+    <select id="college">
+        <option value="">Select College Qualification</option>
+        <option value="Inter">Inter</option>
+        <option value="Degree">Degree</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="PG/Above">PG/Above</option>
+    </select>
+</div>
+
+        <!-- Mother Name -->
+        <label for="motherName">Mother Name</label>
         <input
             type="text"
-            id="qualification"
-            placeholder="Enter qualification"
+            id="motherName"
+            placeholder="Enter mother name"
             required
         >
-
-        <!-- Father Name -->
+         <!-- Father Name -->
         <label for="fatherName">Father Name</label>
         <input
             type="text"
@@ -55,11 +74,11 @@
             required
         >
 
-        <!-- Father Mobile -->
-        <label for="fatherMobile">Father Mobile Number</label>
+        <!-- Parent Mobile -->
+        <label for="parentMobile">Parent Mobile Number</label>
         <input
             type="tel"
-            id="fatherMobile"
+            id="parentMobile"
             placeholder="Enter 10-digit mobile number"
             maxlength="10"
             inputmode="numeric"
@@ -78,11 +97,11 @@
             required
         >
 
-        <!-- Mandal -->
-        <label for="mandal">Mandal</label>
+        <!-- Constituency -->
+        <label for="constituency">Constituency</label>
 
-        <select id="mandal" required>
-            <option value="">Select Mandal</option>
+        <select id="constituency" required>
+            <option value="">Select Constituency</option>
             <option value="Kodad">Kodad</option>
             <option value="Huzurnagar">Huzurnagar</option>
             <option value="Jaggayyapeta">Jaggayyapeta</option>
