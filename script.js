@@ -109,7 +109,11 @@ if (qualification === "College") {
     const constituency =
         document.getElementById("constituency").value;
 
+        const quranArabic =
+    document.querySelector('input[name="quranArabic"]:checked').value;
 
+         const surahCount =
+    document.getElementById("surahCount").value;
     // ===============================
     // MOBILE NUMBER VALIDATION
     // ===============================
@@ -260,6 +264,12 @@ if (qualification === "College") {
 
         "&constituency=" +
         encodeURIComponent(constituency) +
+
+        "&quranArabic=" +
+       encodeURIComponent(quranArabic) +
+
+       "&surahCount=" +
+       encodeURIComponent(surahCount) +
 
         "&callback=" +
         encodeURIComponent(callbackName);
