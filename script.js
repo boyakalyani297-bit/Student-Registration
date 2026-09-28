@@ -112,8 +112,8 @@ if (qualification === "College") {
         const quranArabic =
     document.querySelector('input[name="quranArabic"]:checked').value;
 
-         const surahCount =
-    document.getElementById("surahCount").value;
+         const masjidName=
+    document.getElementById("masjidName").value;
     // ===============================
     // MOBILE NUMBER VALIDATION
     // ===============================
@@ -268,8 +268,8 @@ if (qualification === "College") {
         "&quranArabic=" +
        encodeURIComponent(quranArabic) +
 
-       "&surahCount=" +
-       encodeURIComponent(surahCount) +
+       "&masjidName=" +
+       encodeURIComponent(masjidName) +
 
         "&callback=" +
         encodeURIComponent(callbackName);
